@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 import re
 
 
@@ -19,7 +19,7 @@ sentences = [y for x in sentences for y in x] # flatten list
 
 # Extract word vectors
 word_embeddings = {}
-f = open('glove.6B.100d.txt', encoding='utf-8')
+f = open('glove/glove.6B.100d.txt', encoding='utf-8')
 for line in f:
     values = line.split()
     word = values[0]
@@ -37,7 +37,7 @@ clean_sentences = [s.lower() for s in clean_sentences]
 
 
 
-nltk.download('stopwords')
+# nltk.download('stopwords')
 
 
 from nltk.corpus import stopwords
@@ -59,7 +59,7 @@ clean_sentences = [remove_stopwords(r.split()) for r in clean_sentences]
 
 # Extract word vectors
 word_embeddings = {}
-f = open('glove.6B.100d.txt', encoding='utf-8')
+f = open('glove/glove.6B.100d.txt', encoding='utf-8')
 for line in f:
     values = line.split()
     word = values[0]
