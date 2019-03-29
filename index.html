@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Auto Summaries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Summaries</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">About Us <span class="sr-only">(current)</span></a>
+            </li>
+            
+          </ul>
+         
+        </div>
+      </nav>
+
+      <div class="info-wrapper">
+          <div class="info">
+              <h1>Short Summaries</h1>
+              <p>Put the Text In the given Box Below </p>
+          </div>
+          <div class="input-text">
+                <div class="text-area">
+                    <textarea name="inputText" id="" cols="80" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="generateOutput" onclick="generateOutput()">
+                <button class="generate" >Generate Summaries</button>
+            </div>
+          <div class="output-text">
+              <textarea name="output-text" id="" cols="80" rows="10"></textarea>
+          </div>
+      </div>
+      <p class='a'></p>
+      <footer>
+          <div class="about-info" id="about">
+              <div class="member1"></div>
+              <div class="member2"></div>
+              <div class="member3"></div>
+          </div>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
