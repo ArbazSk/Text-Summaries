@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import nltk
-# nltk.download('punkt')
+#nltk.download('punkt')
 import re
 
 
@@ -82,6 +82,7 @@ sim_mat = np.zeros([len(sentences), len(sentences)])
 
 
 from sklearn.metrics.pairwise import cosine_similarity
+#import sklearn
 
 
 for i in range(len(sentences)):
@@ -90,7 +91,8 @@ for i in range(len(sentences)):
       sim_mat[i][j] = cosine_similarity(sentence_vectors[i].reshape(1,100), sentence_vectors[j].reshape(1,100))[0,0]
 
 
-
+print("Printing The Sim_mat:")
+print(sim_mat)
 
 import networkx as nx
 
