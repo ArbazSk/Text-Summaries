@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="info-wrapper">
+    <div class="info">
+        <h1>Short Summaries</h1>
+        <p>Put the Text In the given Box Below </p>
+    </div>
+    <div class="input-text">
+          <div class="text-area">
+              <textarea name="inputText" id="" cols="60" rows="10"></textarea>
+          </div>
+          <form action="app.py" method="post" enctype="multipart/form-data">
+            Select file to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload" name="submit" id="uploadimage">
+        </form>
+     <div class="generateOutput" onclick="generateOutput()">
+            <button class="generate" >Generate Summary</button>
+      </div>
+      <!-- <div class="generateOutput" onclick="generateOutput()">
+      </div> -->
+
+    <div class="output-text">
+        <textarea name="output-text" id="" cols="60" rows="10"></textarea>
+    </div>
+</div>
+<p class='a'></p>
+<footer>
+    <div class="about-info" id="about">
+        <div class="member1"></div>
+        <div class="member2"></div>
+        <div class="member3"></div>
+    </div>
+</footer>
+
+<script>
+  function generateOutput(){
+      var out = document.getElementsByClassName('output-text')[0];
+      out.style.display = "block";
+
+  }
+</script>
+{% endblock %}
