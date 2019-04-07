@@ -5,6 +5,7 @@ import nltk
 import re
 
 
+
 df = pd.read_csv("tennis_articles_v4.csv")
 
 
@@ -58,14 +59,14 @@ clean_sentences = [remove_stopwords(r.split()) for r in clean_sentences]
 
 
 # Extract word vectors
-word_embeddings = {}
-f = open('glove/glove.6B.100d.txt', encoding='utf-8')
-for line in f:
-    values = line.split()
-    word = values[0]
-    coefs = np.asarray(values[1:], dtype='float32')
-    word_embeddings[word] = coefs
-f.close()
+# word_embeddings = {}
+# f = open('glove/glove.6B.100d.txt', encoding='utf-8')
+# for line in f:
+#     values = line.split()
+#     word = values[0]
+#     coefs = np.asarray(values[1:], dtype='float32')
+#     word_embeddings[word] = coefs
+# f.close()
 
 
 sentence_vectors = []
@@ -91,8 +92,8 @@ for i in range(len(sentences)):
       sim_mat[i][j] = cosine_similarity(sentence_vectors[i].reshape(1,100), sentence_vectors[j].reshape(1,100))[0,0]
 
 
-print("Printing The Sim_mat:")
-print(sim_mat)
+# print("Printing The Sim_mat:")
+# print(sim_mat)
 
 import networkx as nx
 
@@ -106,4 +107,5 @@ ranked_sentences = sorted(((scores[i],s) for i,s in enumerate(sentences)), rever
 
 # Extract top 10 sentences as the summary
 for i in range(10):
-  print(ranked_sentences[i][1])
+  print(f"{i+1}-->" + ranked_sentences[i][1])
+  
