@@ -11,7 +11,14 @@
 </head>
 <body>
   {% include 'navbar.html' %}
+  <!-- {% block error %} {% endblock %} -->
   {% block body %}
   {% endblock %}
+  {% block out %}
+  {% endblock %}
+
+
+  {% include 'footer.html' %}
+  <script src="../static/main.js"> </script>
 </body>
 </html>

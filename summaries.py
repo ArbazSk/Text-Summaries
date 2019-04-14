@@ -5,7 +5,6 @@ import nltk
 import re
 
 
-
 df = pd.read_csv("tennis_articles_v4.csv")
 
 
@@ -15,8 +14,6 @@ for s in df['article_text']:
   sentences.append(sent_tokenize(s))
 
 sentences = [y for x in sentences for y in x] # flatten list
-
-
 
 # Extract word vectors
 word_embeddings = {}

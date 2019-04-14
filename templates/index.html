@@ -6,38 +6,24 @@
         <p>Put the Text In the given Box Below </p>
     </div>
     <div class="input-text">
+        <form action="/summary" method="POST" enctype="multipart/form-data">
           <div class="text-area">
-              <textarea name="inputText" id="" cols="60" rows="10"></textarea>
+              <textarea name="inputText" id="" cols="60" rows="10">{{ fir }}</textarea>
           </div>
-          <form action="app.py" method="post" enctype="multipart/form-data">
-            Select file to upload:
+          
+            <!-- Select file to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload" name="submit" id="uploadimage">
+            <input  value="Upload" name="submit" id="uploadimage"> -->
+            <button class="generate" type="submit" onclick="generateOutput()">Generate Summary</button>
         </form>
-     <div class="generateOutput" onclick="generateOutput()">
-            <button class="generate" >Generate Summary</button>
-      </div>
+
       <!-- <div class="generateOutput" onclick="generateOutput()">
       </div> -->
 
     <div class="output-text">
-        <textarea name="output-text" id="" cols="60" rows="10"></textarea>
+        <!-- <textarea name="output-text" id="" cols="60" rows="10">{{ result }}</textarea> -->
+        <p>{{ result }} </p>
     </div>
 </div>
-<p class='a'></p>
-<footer>
-    <div class="about-info" id="about">
-        <div class="member1"></div>
-        <div class="member2"></div>
-        <div class="member3"></div>
-    </div>
-</footer>
 
-<script>
-  function generateOutput(){
-      var out = document.getElementsByClassName('output-text')[0];
-      out.style.display = "block";
-
-  }
-</script>
 {% endblock %}

@@ -63,7 +63,7 @@ background-color:#14315e;
     padding: 15px;
 }
 .output-text{
-    display: none;
+    /* display: none; */
     margin-top: 3%;
 }
 
