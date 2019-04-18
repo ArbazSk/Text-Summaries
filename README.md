@@ -1,2 +1,2 @@
 # Text-Summaries
-Auto complete Text Summarization
+Auto complete Text Summarization Using TextRank Algorithm
